@@ -13,7 +13,7 @@ public class Main {
 			}
 		}
 		else {
-			calculate(0.0000001d);	
+			calculate(1e-16d);	
 		}
 	}
 
