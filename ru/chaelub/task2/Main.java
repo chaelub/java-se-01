@@ -3,25 +3,30 @@ package ru.chaelub.task2;
 public class Main {
 	public static void main(String[] args){
 		Integer i;
-		for(i=0; i<args.length;i+=2){
-			if(args[i]=="-e"){
-				calculate(Double.parseDouble(args[i+1]));
+		String s;
+		if(args.length!=0){
+			for(i=0; i<args.length;i+=2){
+				s = args[i];
+				if(s.equals("-e")){
+					calculate(Double.parseDouble(args[i+1]));
+				}
 			}
 		}
-		calculate(Double.parseDouble(args[1]));
+		else {
+			calculate(0.0000001d);	
+		}
 	}
 
 	private static void calculate(Double e) {
 		if(e!=null){
-			System.out.println("E is "+e);
-			Integer i=1;
-			Double a=0.0;
-			do {
+			System.out.println("Эпсилон: "+e);
+			Integer i;
+			Double a;
+			a=1.0;
+			for(i=1;a>=e;i++){
 				a = 1/(Math.pow((i+1),2));
-				System.out.println("Cur function value is "+a);
-				i++;
+				System.out.println("Текущее знаечение функции для i="+i+" равняется "+a);
 			}
-			while (a>e);
 		}
 	}
 }
