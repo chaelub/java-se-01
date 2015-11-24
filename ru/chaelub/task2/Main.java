@@ -11,7 +11,12 @@ public class Main {
 			for(i=0; i<args.length;i+=2){
 				s = args[i];
 				if(s.equals("-e")){
-					calculate(Double.parseDouble(args[i+1]));
+					if((i+1)>=args.length){
+						calculate(EPSILON);
+					}
+					else{
+						calculate(Double.parseDouble(args[i+1]));
+					}
 				}
 			}
 		}
