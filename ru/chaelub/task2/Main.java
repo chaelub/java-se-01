@@ -1,8 +1,11 @@
 package ru.chaelub.task2;
 
 public class Main {
+
+	private static double EPSILON = 1e-10d;
+
 	public static void main(String[] args){
-		Integer i;
+		int i;
 		String s;
 		if(args.length!=0){
 			for(i=0; i<args.length;i+=2){
@@ -13,15 +16,15 @@ public class Main {
 			}
 		}
 		else {
-			calculate(1e-16d);	
+			calculate(EPSILON);	
 		}
 	}
 
 	private static void calculate(Double e) {
 		if(e!=null){
 			System.out.println("Эпсилон: "+e);
-			Integer i;
-			Double a;
+			int i;
+			double a;
 			a=1.0;
 			for(i=1;a>=e;i++){
 				a = 1/(Math.pow((i+1),2));
