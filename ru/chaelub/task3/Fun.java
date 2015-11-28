@@ -5,31 +5,32 @@ package ru.chaelub.task3;
 
 public class Fun {
 
-  private double startDiapasone;
-  private double endDiapasone;
+  private double startDiapason;
+  private double endDiapason;
   private double step;
 
   public Fun(){
     this(0.0,1.0,0.2);
   }
 
-  public Fun(Double startDiapasone, Double endDiapasone, Double step){
-    this.startDiapasone = startDiapasone;
-    this.endDiapasone = endDiapasone;
+  public Fun(Double startDiapason, Double endDiapason, Double step){
+    this.startDiapason = startDiapason;
+    this.endDiapason = endDiapason;
     this.step = step;
   }
 
   public void calculateFun(){
     double pos;
     double cur;
-    for(pos=startDiapasone; pos<=endDiapasone; pos+=step){
+    System.out.format("\n| %-15s| %-15s|\n","X value", "Function value");
+    for(pos=startDiapason; pos<=endDiapason; pos+=step){
       cur = Math.tan(2*pos) - 3;
       System.out.format("| %-15.5f| %-15.5f|\n",pos, cur);
     }
   }
 
   public void printYourVals(){
-    System.out.println(startDiapasone+" "+endDiapasone+" "+step);
+    System.out.println(startDiapason+" "+endDiapason+" "+step);
   }
 
 }
