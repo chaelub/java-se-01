@@ -9,9 +9,7 @@ public class Fun {
   private double endDiapason;
   private double step;
 
-  public Fun(){
-    this(0.0,1.0,0.2);
-  }
+  private Fun(){}
 
   public Fun(Double startDiapason, Double endDiapason, Double step){
     this.startDiapason = startDiapason;
