@@ -17,7 +17,7 @@ public class Main {
 					else{
 						calculate(Double.parseDouble(args[i+1]));
 					}
-				}
+				}   
 			}
 		}
 		else {
